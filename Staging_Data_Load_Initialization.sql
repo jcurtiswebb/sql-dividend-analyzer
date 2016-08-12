@@ -1,4 +1,4 @@
-ALTER PROC stg.StagingData
+CREATE PROC stg.StagingData
 	@type AS varchar(8),
 	@loadinitial AS BIT,
 	@startdate AS DATE,
