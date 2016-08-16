@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SQLFinance">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="JOSH-PC\SQL16:Josh-PC\Josh">
+          <Created>2016-08-12T14:28:42.7564416-04:00</Created>
+          <Type>SQL</Type>
+          <Server>JOSH-PC\SQL16</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>master</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Database_Table_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Database_Table_Initialization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Production_Data_Transfer.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Production_Data_Transfer.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Reports_valuations.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Reports_valuations.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Staging_Data_Load.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Staging_Data_Load.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Staging_Data_Load_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Staging_Data_Load_Initialization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Update_Price_Percent_Change.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Update_Price_Percent_Change.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Update_Report_Beta.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Update_Report_Beta.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Update_Report_Dividend_Growth.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Update_Report_Dividend_Growth.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Update_Report_Valuation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Update_Report_Valuation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Valuation_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Valuation_Initialization.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

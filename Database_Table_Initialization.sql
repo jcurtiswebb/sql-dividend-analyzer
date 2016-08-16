@@ -97,7 +97,8 @@ CREATE TABLE SQLFinance.prd.Report
 	cash_flow_inv money null,	
 	cash_flow_fin money null,
 	div_growth smallmoney null,
-	valuation smallmoney null
+	valuation smallmoney null,
+	beta smallmoney null
 )
 
 IF OBJECT_ID(N'prd.Price', N'U') IS NOT NULL DROP TABLE prd.Price;
@@ -111,7 +112,15 @@ CREATE TABLE SQLFinance.prd.Price(
 	closeprice money NULL,
 	volume bigint NULL,
 	adjclose money NULL,
+	daygain decimal(9,5) NULL
 )
+
+IF OBJECT_ID(N'prd.Beta', N'U') IS NOT NULL DROP TABLE prd.Beta;
+
+CREATE TABLE SQLFinance.prd.Beta(
+	symbol varchar(50) NULL,
+	beta decimal(9,4) 
+) 
 
 
 

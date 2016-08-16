@@ -44,3 +44,5 @@ INNER JOIN T1
 ON T1.Current_Year = T2.fiscal_year 
 	AND T1.symbol = T2.symbol 
 	AND T1.period_focus = T2.period_focus
+
+
