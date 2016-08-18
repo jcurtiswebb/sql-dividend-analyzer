@@ -6,8 +6,29 @@ IF DB_ID(N'SQLFinance') IS NOT NULL
 	DROP DATABASE SQLFinance;
 GO
 
-CREATE DATABASE SQLFinance;
-GO
+DECLARE @datapath AS nvarchar(500), @databasepath AS nvarchar(500), @logpath AS nvarchar(500)
+SET @datapath = (SELECT TOP 1 physical_name FROM sys.master_files WHERE name='master')
+SET @databasepath = LEFT(@datapath, (LEN(@datapath) - 10)) + 'SQLFinance.mdf'
+SET @logpath = LEFT(@datapath, (LEN(@datapath) - 10)) + 'SQLFinance_log.mdf'
+	EXEC('CREATE DATABASE SQLFinance
+		ON
+		( NAME = SQLFinance,  
+			FILENAME =''' +  @databasepath + ''',  
+			SIZE = 2048MB,  
+			MAXSIZE = 4096MB,  
+			FILEGROWTH = 512MB 
+		)
+		LOG ON  
+		( NAME = SQLFinance_log,  
+			FILENAME =''' + @logpath + ''',  
+			SIZE = 2048MB,  
+			MAXSIZE = 2560MB,  
+			FILEGROWTH = 512MB )');
+	GO
+
+
+ALTER DATABASE SQLFinance
+	SET RECOVERY SIMPLE;
 
 /* Create 2 Schemas: Staging (stg) and Production (prd)
 	Staging will hold all of the tables that new data will be dumped into. 

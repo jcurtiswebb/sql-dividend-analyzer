@@ -1,4 +1,11 @@
-CREATE PROC stg.StagingData
+USE SQLFinance;
+GO
+
+IF OBJECT_ID(N'dbo.usp_InsertStagingData', N'P') IS NOT NULL
+	DROP PROC dbo.usp_InsertStagingData;
+GO
+
+CREATE PROC dbo.usp_InsertStagingData
 	@type AS varchar(8),
 	@loadinitial AS BIT,
 	@startdate AS DATE,
