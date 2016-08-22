@@ -136,12 +136,6 @@ CREATE TABLE SQLFinance.prd.Price(
 	daygain decimal(9,5) NULL
 )
 
-IF OBJECT_ID(N'prd.Beta', N'U') IS NOT NULL DROP TABLE prd.Beta;
-
-CREATE TABLE SQLFinance.prd.Beta(
-	symbol varchar(50) NULL,
-	beta decimal(9,4) 
-) 
 
 
 
