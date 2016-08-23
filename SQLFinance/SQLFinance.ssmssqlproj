@@ -19,11 +19,35 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="00_Main_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>00_Main_Initialization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="clrAssembly_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>clrAssembly_Initialization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Crawler_Load_Data_.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Crawler_Load_Data_.sql</FullPath>
+        </FileNode>
         <FileNode Name="Database_Table_Initialization.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Database_Table_Initialization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Outperformers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Outperformers.sql</FullPath>
         </FileNode>
         <FileNode Name="Production_Data_Transfer.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
@@ -42,6 +66,18 @@
           <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Staging_Data_Load_Initialization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Stock_Crawler_Execute.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Stock_Crawler_Execute.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Stock_Crawler_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Stock_Crawler_Initialization.sql</FullPath>
         </FileNode>
         <FileNode Name="Update_Price_Percent_Change.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>

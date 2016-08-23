@@ -29,6 +29,11 @@ SET @logpath = LEFT(@datapath, (LEN(@datapath) - 10)) + 'SQLFinance_log.mdf'
 
 ALTER DATABASE SQLFinance
 	SET RECOVERY SIMPLE;
+GO
+
+ALTER DATABASE SQLFinance
+	SET TRUSTWORTHY ON;
+GO
 
 /* Create 2 Schemas: Staging (stg) and Production (prd)
 	Staging will hold all of the tables that new data will be dumped into. 
@@ -136,7 +141,16 @@ CREATE TABLE SQLFinance.prd.Price(
 	daygain decimal(9,5) NULL
 )
 
-
-
-
+-- To allow advanced options to be changed.  
+EXEC sp_configure 'show advanced options', 1;  
+GO  
+-- To update the currently configured value for advanced options.  
+RECONFIGURE;  
+GO  
+-- To enable the feature.  
+EXEC sp_configure 'xp_cmdshell', 1;  
+GO  
+-- To update the currently configured value for this feature.  
+RECONFIGURE;  
+GO 
 
