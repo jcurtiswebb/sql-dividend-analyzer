@@ -1,4 +1,5 @@
 --Need to manually set path to SQLFinance Folder.
+--SQLCMD needs to be turned on
 -- Can this be done dynamically?
 :setvar datapath "C:\Users\Josh\Documents\SQL Server Management Studio\SQL Server Scripts1\SQLFinance\"
 :r $(datapath)Database_Table_Initialization.sql

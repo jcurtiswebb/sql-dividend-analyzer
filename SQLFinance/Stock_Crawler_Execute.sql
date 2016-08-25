@@ -2,5 +2,6 @@
 USE SQLFinance;
 GO
 
-EXEC dbo.usp_StockCrawler;
+EXEC dbo.usp_StockCrawler
+	@stockTicker ='msft';
 GO
