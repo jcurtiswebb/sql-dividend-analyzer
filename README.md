@@ -7,10 +7,13 @@ Requirements
 Installation
 -Download all financial data from http://data.pystock.com/
 -Unzip all financial data and store in main directory of C: drive in 'pystock-data-gh-pages'
--Using SSMS execute the .sql files in the following order:
-  1. Database_Table_Initialization.sql
-  2. Staging_Data_Load_Initialization.sql
-  3. Staging_Data_Load.sql
-  4. Production_Data_Transfer.sql
-  5. Update_Report_Dividend_Growth.sql
+-Place SQLFinance & clrStockCrawler folders somewhere within the C: drive
+-Open the file 00_Main_Initalization.sql; copy the path of where the SQLFinance folder is, and replace the path in this .sql file
+-Execute the .sql file
+
+Current features include:
+-Dividend growth column within reports updated for quarterly and annual financial reports
+-Updated of Beta value based on the capital asset pricing model
+-Update of valuation column for Fiscal Year financial reports. valuation based on the gordon growth model for dividend investing.
+
 
