@@ -1,0 +1,5 @@
+c:\users\josh\documents\visual studio 2015\Projects\clrStockCrawler\clrStockCrawler\bin\Debug\clrStockCrawler.dll
+c:\users\josh\documents\visual studio 2015\Projects\clrStockCrawler\clrStockCrawler\bin\Debug\clrStockCrawler.pdb
+c:\users\josh\documents\visual studio 2015\Projects\clrStockCrawler\clrStockCrawler\obj\Debug\clrStockCrawler.dll
+c:\users\josh\documents\visual studio 2015\Projects\clrStockCrawler\clrStockCrawler\obj\Debug\clrStockCrawler.pdb
+C:\Users\Josh\Documents\Visual Studio 2015\Projects\clrStockCrawler\clrStockCrawler\obj\Debug\clrStockCrawler.csprojResolveAssemblyReference.cache
