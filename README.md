@@ -2,6 +2,7 @@
 Use pystock parsed financial data to calculate dividend growth rates and compare stocks
 
 <b>Requirements</b>
+
 -SQL Server 2012 or newer
 
 <b>Installation</b>
