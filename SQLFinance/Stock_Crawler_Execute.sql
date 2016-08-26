@@ -3,5 +3,7 @@ USE SQLFinance;
 GO
 
 EXEC dbo.usp_StockCrawler
-	@stockTicker ='msft';
+	@stockTicker ='msft',
+	@startDate ='01-01-2001',
+	@endDate = '01-01-2012';
 GO

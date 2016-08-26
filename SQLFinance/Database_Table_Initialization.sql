@@ -1,11 +1,13 @@
 /* Create the SQLFinance Database 
-	No MAXSIZE is specified, the database files can grow to fill all available disk space
+	
 */
 USE master;
+GO
 IF DB_ID(N'SQLFinance') IS NOT NULL
 	DROP DATABASE SQLFinance;
 GO
 
+--Query sys.master_files to discover where the master database is kept. SQLFinance will be created in the same directory
 DECLARE @datapath AS nvarchar(500), @databasepath AS nvarchar(500), @logpath AS nvarchar(500)
 SET @datapath = (SELECT TOP 1 physical_name FROM sys.master_files WHERE name='master')
 SET @databasepath = LEFT(@datapath, (LEN(@datapath) - 10)) + 'SQLFinance.mdf'
@@ -26,11 +28,12 @@ SET @logpath = LEFT(@datapath, (LEN(@datapath) - 10)) + 'SQLFinance_log.mdf'
 			FILEGROWTH = 512MB )');
 	GO
 
-
+--No database recovery will ever be needed since all data will be acquired from yahoo finance API or py-stock-crawler
 ALTER DATABASE SQLFinance
 	SET RECOVERY SIMPLE;
 GO
 
+--Database trustworthy needs to be on for the CLR stock crawler stored procedure to write to the file system
 ALTER DATABASE SQLFinance
 	SET TRUSTWORTHY ON;
 GO
@@ -147,7 +150,7 @@ GO
 -- To update the currently configured value for advanced options.  
 RECONFIGURE;  
 GO  
--- To enable the feature.  
+-- enabling the commandchell feature allows for the file system to be searched in clrAssembly_Initialization.sql 
 EXEC sp_configure 'xp_cmdshell', 1;  
 GO  
 -- To update the currently configured value for this feature.  
