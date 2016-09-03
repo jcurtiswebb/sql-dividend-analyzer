@@ -21,6 +21,8 @@ GO
 GO
 :r $(datapath)Production_Data_Transfer.sql
 GO
+:r $(datapath)Production_Table_Index_Initialization.sql
+GO
 :r $(datapath)Update_Price_Percent_Change.sql
 GO
 :r $(datapath)Update_Report_Dividend_Growth.sql

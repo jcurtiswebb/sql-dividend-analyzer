@@ -1,10 +1,9 @@
 --Stock Crawler Get Data
---Month must be inputted as 00-11 for Jan-Dec
 USE SQLFinance;
 GO
 
 EXEC dbo.usp_StockCrawler
 	@stockTicker ='msft',
-	@startDate ='01-01-2001',
-	@endDate = '01-01-2012';
+	@startDate ='00-01-2009',
+	@endDate = '07-21-2016';
 GO

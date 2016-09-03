@@ -24,7 +24,7 @@ SET @logpath = LEFT(@datapath, (LEN(@datapath) - 10)) + 'SQLFinance_log.mdf'
 		( NAME = SQLFinance_log,  
 			FILENAME =''' + @logpath + ''',  
 			SIZE = 2048MB,  
-			MAXSIZE = 2560MB,  
+			MAXSIZE = 4096MB,  
 			FILEGROWTH = 512MB )');
 	GO
 

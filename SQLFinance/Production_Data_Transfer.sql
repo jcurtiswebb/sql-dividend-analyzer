@@ -16,6 +16,9 @@ SELECT TRY_CONVERT(varchar(20),[symbol])
       ,TRY_CONVERT(money, [adjclose])
 FROM SQLFinance.stg.Price 
 
+CHECKPOINT;
+GO
+
 INSERT INTO SQLFinance.prd.Report(
 	[symbol]
       ,[end_date]
