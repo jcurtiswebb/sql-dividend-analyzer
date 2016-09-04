@@ -55,6 +55,11 @@ BEGIN
     EXEC( 'CREATE SCHEMA prd' );
 END
 
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'ref')
+BEGIN
+    EXEC( 'CREATE SCHEMA ref' );
+END
+
 /* Create Staging Report and Price Tables */
 
 IF OBJECT_ID(N'stg.Report', N'U') IS NOT NULL DROP TABLE stg.Report;
@@ -143,6 +148,12 @@ CREATE TABLE SQLFinance.prd.Price(
 	adjclose money NULL,
 	daygain decimal(9,5) NULL
 )
+
+IF OBJECT_ID(N'ref.Yr', N'U') IS NOT NULL DROP TABLE ref.Yr;
+
+CREATE TABLE SQLFinance.ref.Yr(
+	FY char(4) NULL
+) 
 
 -- To allow advanced options to be changed.  
 EXEC sp_configure 'show advanced options', 1;  

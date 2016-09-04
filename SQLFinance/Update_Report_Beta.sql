@@ -9,7 +9,7 @@
 	N4 = Price table subquery for average daily gain of the index
 	N5 = Price table with index only daily data
 	*/
-DECLARE @index AS varchar(8) = 'SPY'
+DECLARE @index AS varchar(8) = 'SPY';
 WITH T1 AS
 (
 	SELECT 
@@ -33,6 +33,7 @@ WITH T1 AS
 			ON N1.pricedate = N5.pricedate
 	WHERE N2.period_focus = 'FY'
 		AND N5.symbol = @index
+		AND N2.fiscal_year IN (SELECT FY FROM SQLFinance.ref.Yr)
 )
 UPDATE T2 
 SET T2.beta = T3.beta 

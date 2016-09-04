@@ -5,17 +5,55 @@
 USE SQLFinance;
 GO
 
+SELECT DISTINCT P1.symbol, (SELECT MIN(P2.pricedate) FROM SQLFinance.prd.Price AS P2 
+						WHERE P2.symbol = P1.symbol
+						AND P2.pricedate < DATEADD(Year, YEAR(P1.Pricedate)-1899, DATEADD(month, 0, DATEADD(day, 0, 0)))
+						AND P2.pricedate > DATEADD(Year, YEAR(P1.Pricedate)-1901, DATEADD(month, 0, DATEADD(day, 0, 0)))
+						) AS pricedate
+INTO #TempMinDate
+FROM SQLFinance.prd.Price AS P1
+
+SELECT DISTINCT P1.symbol, (SELECT MAX(P2.pricedate) FROM SQLFinance.prd.Price AS P2 
+						WHERE P2.symbol = P1.symbol
+						AND P2.pricedate < DATEADD(Year, YEAR(P1.Pricedate)-1899, DATEADD(month, 0, DATEADD(day, 0, 0)))
+						AND P2.pricedate > DATEADD(Year, YEAR(P1.Pricedate)-1901, DATEADD(month, 0, DATEADD(day, 0, 0)))
+						) AS pricedate
+INTO #TempMaxDate
+FROM SQLFinance.prd.Price AS P1
+
 DECLARE @index AS varchar(8) = 'SPY'
 
 --First Create temporary table with each symbol and it's yearly performance
+SELECT N1.symbol, N1.pricedate, N2.closeprice, YEAR(N1.pricedate) AS FY
+INTO #TempMinPrice
+FROM #TempMinDate AS N1
+INNER JOIN SQLFinance.prd.Price AS N2
+ON N2.symbol = N1.symbol
+AND N2.pricedate = N1.pricedate
+
+SELECT N1.symbol, N1.pricedate, N2.closeprice, YEAR(N1.pricedate) AS FY
+INTO #TempMaxPrice
+FROM #TempMaxDate AS N1
+INNER JOIN SQLFinance.prd.Price AS N2
+ON N2.symbol = N1.symbol
+AND N2.pricedate = N1.pricedate
+
+
+
 WITH yearAggregate AS
 (
-SELECT symbol, YEAR(pricedate), 
-FROM prd.Price AS N1
-GROUP BY symbol, YEAR(pricedate)
+SELECT N1.symbol, N1.closeprice/N2.closeprice - 1 AS gain, N1.FY
+FROM #TempMaxPrice N1
+INNER JOIN #TempMinPrice AS N2
+	ON N1.symbol = N2.symbol
+	AND N1.FY = N2.FY
+WHERE N2.closeprice > 0
 )
+SELECT T1.symbol, T1.fy TradingYear, T1.gain Symbolgain, T2.gain AS Indexgain
+FROM yearAggregate AS T1
+	INNER JOIN yearAggregate AS T2
+		ON T1.fy = T2.fy
+		AND T2.symbol = 'SPY'
+WHERE T1.gain > T2.gain
+ 
 
---How do I find the starting and ending dates for each year:
---Option 1: find the max and min dates for each YEAR(pricedate) grouping for each symbol
---Option 2: find the max and min dates for each YEAR() based on some sample and then apply those dates to each symbol
-(SELECT ((N2.closeprice / N2.openprice) - 1) FROM prd.Price AS N2 WHERE )
