@@ -31,5 +31,10 @@ GO
 GO
 :r $(datapath)Update_Report_Valuation.sql
 GO
-
+:r $(datapath)Tally_Table_Initialization.sql
+GO
+:r $(datapath)Year_Table_Initialization.sql
+GO
+:r $(datapath)Outperformers.sql
+GO
 

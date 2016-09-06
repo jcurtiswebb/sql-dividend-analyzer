@@ -85,6 +85,12 @@
           <AssociatedConnUserName />
           <FullPath>Stock_Crawler_Initialization.sql</FullPath>
         </FileNode>
+        <FileNode Name="Tally_Table_Initialization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Tally_Table_Initialization.sql</FullPath>
+        </FileNode>
         <FileNode Name="Update_Price_Percent_Change.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
@@ -115,11 +121,11 @@
           <AssociatedConnUserName />
           <FullPath>Valuation_Initialization.sql</FullPath>
         </FileNode>
-        <FileNode Name="Year_Table_Initalization.sql">
+        <FileNode Name="Year_Table_Initialization.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:JOSH-PC\SQL16:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>JOSH-PC\SQL16</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Year_Table_Initalization.sql</FullPath>
+          <FullPath>Year_Table_Initialization.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
