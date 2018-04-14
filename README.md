@@ -21,8 +21,8 @@ Use pystock parsed financial data to calculate dividend growth rates and compare
 
 -Dividend growth column within reports updated for quarterly and annual financial reports
 
--Updated of Beta value based on the capital asset pricing model
+-Beta value based on the capital asset pricing model
 
--Update of valuation column for Fiscal Year financial reports. valuation based on the gordon growth model for dividend investing.
+-Valuation column for Fiscal Year financial reports. Valuation based on the gordon growth model for dividend investing.
 
 
